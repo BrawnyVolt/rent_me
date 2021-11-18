@@ -1,3 +1,4 @@
+import { React } from 'react';
 import { useEffect } from 'react'
 
 
@@ -6,10 +7,10 @@ function Home(){
 
     // headers.append(Access-Control-Allow-Origin: http://localhost3000)
 
-    useEffect(() => {
-        fetch("http://localhost:3000/")
-          .then((response) => response.json())
-          .then((data) => console.log(data));
+        useEffect(() => {
+        fetch('http://localhost:3000')
+          .then(response => response.json())
+          .then(data => console.log(data));
       }, []);
 
 
@@ -24,7 +25,9 @@ function Home(){
 
 
     return(
-        <h1>Home</h1>
+
+            <h1>Home</h1>
+
     )
 }
 
