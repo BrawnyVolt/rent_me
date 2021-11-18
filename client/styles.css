@@ -1,0 +1,23 @@
+body {
+    background-color: green;
+}
+
+
+
+img {
+    /* max-width: 100%;
+    max-height: 100%; */
+    width: 300px;
+    height: auto;
+    border: 10px green;
+
+}
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .child {
+    flex: 1 0 41%; 
+    margin: 5px;
+  }

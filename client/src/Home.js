@@ -1,26 +1,45 @@
 import { React } from 'react';
-import { useEffect } from 'react'
-
-
+import { useState, useEffect } from 'react'
 
 function Home(){
+    const [houses, setHouses] = useState([])
+    const [recentHouses, setRecentHouses] = useState([])
 
-    // headers.append(Access-Control-Allow-Origin: http://localhost3000)
-    
     useEffect(() => {
         fetch('http://localhost:3000')
-          .then(response => response.json())
-          .then(data => console.log(data));
-      }, []);
+        .then(response => response.json())
+        .then(data => setHouses(data));
+    }, []);
 
+    useEffect(() => {
+        let twoHouses = houses.slice(-2)
+        setRecentHouses(twoHouses);
+    }, [houses]);
 
+    function renderRecentHouses() {
+        
+        return recentHouses.map((property) =>{
+            return (
+                <div className="parent">
+                    <div className="child">
+                        <img src={`${property.img_url}`} className=""/>
+                        <p className="">{property.property_type}</p>
+                        <p className="">e-mail: {property.contact_info}</p>
+                        <p className="">Price: ${property.price}</p>
+                        <p className="">Beds: {property.beds}</p>
+                        <p className="">Baths: {property.baths}</p>
+                    </div>
+                </div>
+            )
+        })
+    }
 
-//       fetch('http://example.com/movies.json')
-//   .then(response => response.json())
-//   .then(data => console.log(data));
-
-    return(
-            <h1>Home</h1>
-    )
+    return (
+        <div className="house-container">
+        {renderRecentHouses()}
+        </div>
+    );
+    
 }
+
 export default Home;

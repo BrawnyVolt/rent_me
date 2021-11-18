@@ -16,7 +16,7 @@ Rentable.create(property_type: 'ok House', address: '928782 bread st, pencil, PA
 Rentable.create(property_type: 'Big ass mansion', address: '100 first ave, new york, CA', beds: 14, baths: 16, price: 420690, contact_info: 'hell_yeah_brother@drugs.com', img_url: 'https://www.jamesedition.com/stories/wp-content/uploads/2020/12/1_Israel.jpg')
 
 Rentable.create(property_type: 'Slum Lord Manor', address: '12215 SW Oak Leaf Dr, Apt C420, Silver Spring, MD 20901
-', beds: 1, baths: 0, price: 4, contact_info: 'Not_even_once@TheEnclave.com', img_url: 'https://www.poopfromabutt.jpg')
+', beds: 1, baths: 0, price: 47, contact_info: 'Not_even_once@TheEnclave.com', img_url: 'https://i.pinimg.com/originals/58/b3/40/58b340936b2c1ed07bed66c260b00534.png')
 
 
 puts "Done seeding!"
