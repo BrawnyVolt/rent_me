@@ -10,11 +10,11 @@ Rails.application.routes.draw do
   get '/:id', to: 'rentables#show'
 
 
-  get '/login', to: 'users#index'
+
 
   post '/login', to: 'users#loggingin', as: 'loggingin'
 
-  # destroy '/login', to: 'users#logout', as: 'logout'
+  delete '/logout', to: 'users#logout', as: 'logout'
 
 
 

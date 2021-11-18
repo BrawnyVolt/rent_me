@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2021_11_17_174936) do
 
   create_table "rentable_users", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "property_id"
+    t.integer "rentable_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -24,7 +24,6 @@ ActiveRecord::Schema.define(version: 2021_11_17_174936) do
     t.string "address"
     t.integer "beds"
     t.integer "baths"
-    t.integer "property_id"
     t.integer "price"
     t.string "contact_info"
     t.string "img_url"
