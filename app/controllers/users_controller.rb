@@ -15,6 +15,17 @@ class UsersController < ApplicationController
         user = User.find_by(id: session[:user_id])
         render json: user
     end
+def index
+end
+
+def loggingin
+end
+
+def logout
+end
+
+
+
 
     private
 
